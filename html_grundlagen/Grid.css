@@ -129,3 +129,11 @@ footer {
 .main {
     flex: 1 1 auto;
 }
+
+@media screen and (max-width: 768px) {
+    .content__row {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        text-align: center;
+    }
+}
