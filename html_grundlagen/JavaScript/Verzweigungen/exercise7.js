@@ -11,7 +11,10 @@ async function execute() {
     const num3 = parseFloat(await prompt("Please enter the third number: "));
     const num4 = parseFloat(await prompt("Please enter the fourth number: "));
 
-    const largest = Math.max(num1, num2, num3, num4);
+    let largest = num1;
+    if (num2 > largest) largest = num2;
+    if (num3 > largest) largest = num3;
+    if (num4 > largest) largest = num4;
     console.log(`The largest number is: ${largest}`);
 }
 

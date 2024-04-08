@@ -8,32 +8,35 @@ rl.question("Please enter a single letter: ", checkLetter);
 function checkLetter(letter) {
     switch (letter.toLowerCase()) {
         case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+            console.log("The letter is a vowel.");
+            rl.close();
+            break;
         case 'b':
         case 'c':
         case 'd':
-        case 'e':
         case 'f':
         case 'g':
         case 'h':
-        case 'i':
         case 'j':
         case 'k':
         case 'l':
         case 'm':
         case 'n':
-        case 'o':
         case 'p':
         case 'q':
         case 'r':
         case 's':
         case 't':
-        case 'u':
         case 'v':
         case 'w':
         case 'x':
         case 'y':
         case 'z':
-            console.log("The letter is a vowel.");
+            console.log("The letter is a consonant.");
             rl.close();
             break;
         default:
