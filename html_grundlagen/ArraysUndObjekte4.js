@@ -13,7 +13,8 @@ async function execute() {
 
     const row = parseInt(await prompt("Enter the row number: "));
     const columnName = await prompt("Enter the column name: ");
-    
+
+    const columnIndex = table[0].indexOf(columnName);
 
     if (row >= 0 && row < table.length && columnIndex !== -1) {
         console.log(`The value at row ${row} and column ${columnName} is ${table[row][columnIndex]}.`);
