@@ -9,11 +9,11 @@ async function execute() {
         ["Georg", "Huber", 37],
         ["Fritz", "Mayr", 19]
     ];
-
     const row = parseInt(await prompt("Enter the row number: "));
     const columnName = await prompt("Enter the column name: ");
 
     const columnIndex = table[0].indexOf(columnName);
+
 
     const columnArr ={
         FirstName: 0,
