@@ -5,7 +5,6 @@ rl.on('close', () => process.exit(0));
 
 async function execute() {
     const table = [
-        ["First Name", "Last Name", "Age"],
         ["Hans", "Müller", 22],
         ["Georg", "Huber", 37],
         ["Fritz", "Mayr", 19]
@@ -16,11 +15,12 @@ async function execute() {
 
     const columnIndex = table[0].indexOf(columnName);
 
-    if (row >= 0 && row < table.length && columnIndex !== -1) {
-        console.log(`The value at row ${row} and column ${columnName} is ${table[row][columnIndex]}.`);
-    } else {
-        console.log("Invalid input.");
+    const columnArr ={
+        FirstName: 0,
+        LastName: 1,
+        Age: 2,
     }
+    console.log(table[row][columnArr[columnName]]);
 }
 
 execute().catch((err) => {
